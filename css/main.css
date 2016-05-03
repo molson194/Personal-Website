@@ -1341,9 +1341,55 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #DBDBDB;
+			background-color: #dbdbdb;
 			text-shadow: 1px 1px 0px #fff;
 		}
+
+
+/* Nav */
+
+	#nav {
+		background-color: #282828;
+		text-align: center;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
+		cursor: default;
+	}
+
+		#nav ul {
+			margin-bottom: 0;
+		}
+
+		#nav li {
+			display: inline-block;
+		}
+
+		#nav a {
+			position: relative;
+			display: block;
+			color: #fff;
+			text-decoration: none;
+			outline: 0;
+		}
+
+			#nav a:hover {
+				color: #fff !important;
+			}
+
+			#nav a.active:before {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -0.6em;
+				left: 50%;
+				margin-left: -0.75em;
+				border-left: solid 0.75em transparent;
+				border-right: solid 0.75em transparent;
+				border-top: solid 0.6em #282828;
+			}
 
 /* Articles */
 
@@ -1472,6 +1518,28 @@
 					padding-top: 6em;
 				}
 
+		/* Nav */
+
+			#nav a {
+				-moz-transition: background-color .2s ease-in-out;
+				-webkit-transition: background-color .2s ease-in-out;
+				-ms-transition: background-color .2s ease-in-out;
+				transition: background-color .2s ease-in-out;
+				padding: 0.2em 1em 0.2em 1em;
+				margin: 0.6em 0.2em 0.6em 0.2em;
+				font-weight: 600;
+				border-radius: 8px;
+				color: #fff;
+			}
+
+				#nav a:hover {
+					background: #383838;
+				}
+
+				#nav a:active {
+					background: #484848;
+				}
+
 		/* Articles */
 
 			#top {
@@ -1496,7 +1564,31 @@
 			#contact footer {
 				font-size: 0.9em;
 			}
-			
+
+		/* Copyright */
+
+			#copyright {
+				font-size: 1em;
+				line-height: 1em;
+			}
+
+				#copyright li {
+					display: inline-block;
+					border-left: solid 1px rgba(0, 0, 0, 0.5);
+					box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.1);
+					padding: 0 0 0 1em;
+					margin: 0 0 0 1em;
+				}
+
+					#copyright li:first-child {
+						border: 0;
+						box-shadow: none;
+						padding-left: 0;
+						margin-left: 0;
+					}
+
+	}
+
 /* Tablet */
 
 	@media screen and (min-width: 737px) and (max-width: 1200px) {
@@ -1631,6 +1723,13 @@
 				.wrapper.first {
 					padding-top: 5em;
 				}
+
+		/* Nav */
+
+			#nav a {
+				padding: 0.5em;
+			}
+
 		/* Articles */
 
 			#top .image {
